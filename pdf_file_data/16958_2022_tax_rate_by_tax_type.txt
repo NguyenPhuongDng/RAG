@@ -1,0 +1,85 @@
+City of Pittsburgh 
+Department of Finance 
+414 Grant Street 
+Pittsburgh PA 15219 
+TAX RATE BY TAX TYPE FOR TAX YEAR 2022 
+Tax Type 
+City Rate 
+School Rate 
+City P&I Total 
+School P&I 
+AT - AMUSEMENT TAX 
+5% or (.04762) of gross 
+N/A 
+5% + 1% = (6%) 
+N/A 
+AT - AMUSEMENT TAX  
+if registered as a Performing Art and is a Purely Public 
+Charity
+ZERO 
+N/A 
+N/A 
+N/A 
+LS-1 - LOCAL SERVICES TAX 
+$52.00 
+N/A 
+    5% + 1% = (6%) ** 
+N/A 
+LS-3 - INDIVIDUAL LOCAL SERVICES TAX 
+$52.00 
+N/A 
+** 
+N/A 
+ET-1 - PAYROLL EXPENSE TAX 
+0.0055 
+N/A 
+1% + .5% = 1.5% 
+N/A 
+ISP - INSTITUTIONAL SERVICE PRIVILEGE
+$20,000 Exclusion 
+SERVICES 
+6 Mills (.006) 
+N/A 
+.5% + 1% = (1.5%) 
+N/A 
+COMMISSIONS 
+6 Mills (.006) 
+N/A 
+.5% + 1% = (1.5%) 
+N/A 
+GOODS, WARE, & MERCHANDISE SOLD 
+2 Mills (.002) 
+N/A 
+.5% + 1% = (1.5%) 
+N/A 
+RENTAL 
+6 Mills (.006) 
+N/A 
+.5% + 1% = (1.5%) 
+N/A 
+PT - PARKING TAX 
+37.5% (.27273) 
+N/A 
+5% + 1% = (6%) ***
+N/A 
+REAL ESTATE TAX 
+Land - 8.06 Mills 
+Land - 10.25 Mills
+0 + .833% = (.833%) 
+Building - 8.06 Mills 
+Building - 10.25 Mills
+REAL ESTATE TRANSFER TAX 
+2% 
+1% 
+UF-1 - FACILITY USAGE FEE 
+3% 
+N/A 
+1% 
+N/A 
+**LS-1 10 month penalty maximum = 50% cap
+***PT 10 month penalty maximum = 50% cap 
+TAX RATES & PENALTY AND INTEREST RATES ARE SUBJECT TO CHANGE ANNUALLY 
+2022
+ .5% + 1% = (1.5%) 
+0 + .833% = (.833%)
+
