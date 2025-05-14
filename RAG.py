@@ -1,4 +1,3 @@
-# Necessary inputs
 from FlagEmbedding import FlagReranker
 import os
 import time
@@ -16,7 +15,7 @@ import sys
 from langchain_core.prompts import ChatPromptTemplate, format_document
 from langchain.prompts.prompt import PromptTemplate
 
-os.environ["TOGETHER_API_KEY"] = "414229540a05a7ce253fd2bfc33d221a19ff3277c6bd7bde1056eca4bc0f18ae"  # Removed the API Key that we used
+os.environ["TOGETHER_API_KEY"] = "414229540a05a7ce253fd2bfc33d221a19ff3277c6bd7bde1056eca4bc0f18ae"  
 
 model_name = "BAAI/bge-large-en-v1.5"
 encode_kwargs = {'normalize_embeddings': True} 
