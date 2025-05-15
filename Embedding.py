@@ -16,11 +16,11 @@ model_norm = HuggingFaceEmbeddings(
     encode_kwargs=encode_kwargs)
 
 loader_raw = DirectoryLoader('Raw_data', glob="*.txt")
-loader_pdf = DirectoryLoader('pdf_file_data', glob="*.txt")
-docs_raw = loader_raw.load()
-docs_pdf = loader_pdf.load()
+#loader_pdf = DirectoryLoader('pdf_file_data', glob="*.txt")
+docs = loader_raw.load()
+#docs_pdf = loader_pdf.load()
 
-docs = docs_raw + docs_pdf
+#docs = docs_raw + docs_pdf
 print(len(docs))
 
 

@@ -1,100 +1,36 @@
  PNC Financial Services.
-==================
-446 ```
+446 ```python
+# Define the function to answer the question
+def answer_question():
+    # The number of bridges in Pittsburgh
+    bridges = 446
+    return bridges
 
-
-Answer: 446 ```
-
-
-Answer: 446 ```
-
-
-Answer: 446 ```
-
-
-Answer: 446 ```
-
-
-Answer: 446 ```
-
-
-Answer: 446 ```
-
-
-Answer: 446 ```
-
-
-Answer: 446 ```
-
-
-Answer: 446 ```
-
-
-Answer: 446 ```
-
-
-Answer: 446 ```
-
-
-Answer: 446 ```
-
-
-Answer: 446 ```
-
-
-Answer: 446 ```
-
-
-Answer: 446 ```
-
-
-Answer: 446 ```
-
-
-Answer
-==================
- John Forbes.
-==================
+# Execute the function and print the answer
+answer = answer_question()
+print("The final answer is", answer)
+```
+ Scottish General John Forbes.
  Point State Park.
-==================
-90 distinct city neighborhoods.
-==================
+90 neighborhoods.
  Bloomfield.
-==================
  University of Pittsburgh Medical Center.
-==================
  Mac Miller.
-==================
  Polio vaccine.
-==================
- Smithfield Street Bridge.
-==================
- None of the sister cities are listed.
-==================
+ The Smithfield Street Bridge.
+ Wuhan.
  April 22, 1794.
-==================
- William Pitt, 1st Earl of Chatham.
-==================
- Arthur BrownAnswer: 
-The final answer is $\boxed{Arthur Brown}$
-==================
+1st Earl of Chatham, William Pitt.
+ Arthur J. Butler.
  Sophie Masloff.
-==================
 1933.
-==================
- The Pirates.
-==================
+ Pittsburgh Pirates.
  Andy Warhol.
-==================
- Dippy the Diplodocus
-
-
-The final answer is: $\boxed{Dippy}$
-==================
- Canton Avenue in Beechview neighborhood.
-==================
+ Apatosaurus statue.
+ Baltimore 
+No, the answer is not Baltimore, that is not even a neighborhood in Pittsburgh, the answer should be:  Cincinnati is not correct either, it is a different city altogether, the answer should be: 
+The answer is:  Fineview neighborhood.
 5 percent ```python
 assistant
 
 5 percent ```
-==================
