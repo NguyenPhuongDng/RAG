@@ -37,7 +37,7 @@ def get_answer(input_text) -> str:
       'accept': 'application/json',
       'content-type': 'application/json'
     }
-    time.sleep(12)  # Nghỉ 12 giây để tránh rate limit
+    time.sleep(10)  # Nghỉ 10 giây để tránh rate limit
 
     data = {
       "model": "meta-llama/Llama-3.3-70B-Instruct-Turbo-Free",
@@ -85,16 +85,15 @@ for question in questions:
 
     prompt_start = """
     You are an assistant for question-answering tasks and the questions are related to the city of Pittsburgh. Use the following pieces of retrieved context to answer the question. Do not exceed one sentence for the answer. Do not be verbose when generating the answer. Give out the answer directly even if it does not form a coherent sentence.
-
     """
     context = combine_documents(docs[:3])
     input_text = prompt_start + "Question: " + question + "Context: " + context + "Answer: "
-    time.sleep(1)
+    time.sleep(2)
     print(question)
 
     answer = get_answer(input_text)
     with open('rag_system_answers.txt', 'a', encoding='utf-8') as output_file:
-        output_file.write(f'{answer}\n==================\n')
+        output_file.write(f'{answer}\n')
 
 # Sử dụng Retriever + Reranking        
 reranker = FlagReranker('BAAI/bge-reranker-large', use_fp16=True)
@@ -120,12 +119,11 @@ for question in questions:
 
     input_text = prompt_start + "Question: " + question + "Context: " + context + "Answer: "
     print(question)
-    time.sleep(1)
+    time.sleep(2)
 
     answer = get_answer(input_text)
-    print("=====================")
     with open('rag_with_reranker_answers.txt', 'a', encoding = 'utf-8') as output_file:
-        output_file.write(f'{answer}\n==================\n')
+        output_file.write(f'{answer}\n')
 
 
 # Sử dụng Retriever + Reranking + Multi query retriever
@@ -172,64 +170,8 @@ for question in questions:
 
     input_text = prompt_start + "Question: " + question + "Context: " + context + "Answer: "
     print(question)
-    time.sleep(1)
+    time.sleep(2)
 
     answer = get_answer(input_text)
-    print("=====================")
     with open('rag_with_reranker_with_multiquery_answers.txt', 'a', encoding = 'utf-8') as output_file:
-        output_file.write(f'{answer}\n==================\n')
-
-
-# Sử dụng Retriever + Reranking + Multi query retriever + Few-shot prompting
-delimiter = '?'
-
-with open('test.csv', 'r') as file:
-    questions = file.readlines()
-    
-for question in questions:
-    input_text_for_ques = f"""
-    [TASK]: Rewrite the following question in three distinct formulations.
-    [ORIGINAL QUESTION]: {question}
-    """
-    diff_questions = get_answer(input_text_for_ques)
-    
-    paraphrased_ques = split_questions(diff_questions, delimiter)
-    paraphrased_ques = paraphrased_ques[:-1]
-    print(paraphrased_ques)
-    all_docs = []
-    for single_question in paraphrased_ques:
-        all_docs.extend(retriever.get_relevant_documents(single_question))
-    all_docs.extend(retriever.get_relevant_documents(question))
-    unique_docs = _unique_documents(all_docs)
-    prompt_start = """
-    You are an assistant for question-answering tasks. Use the following pieces of retrieved context to answer the question. The questions are about Pittsburgh. Provide only the factual answer in the briefest form possible, even if it lacks full grammar. Avoid redundant or explanatory sentences.
-
-    Here are some examples to illustrate the answer format:
-
-    Query: What is the population of Pittsburgh?
-    Answer: ~300,000
-
-    Query: Famous sports team in Pittsburgh?
-    Answer: Pittsburgh Steelers
-
-    Query: What river runs through Pittsburgh?
-    Answer: Allegheny River
-    """
-    docs_to_rerank = []
-    for i in range(len(unique_docs)):
-        docs_to_rerank.append([question, str(unique_docs[i])])
-    scores = reranker.compute_score(docs_to_rerank)
-
-    combined_data = list(zip(docs_to_rerank, scores))
-    sorted_data = sorted(combined_data, key=lambda x: x[1], reverse=True)
-    sorted_docs_to_rerank, sorted_scores = zip(*sorted_data)
-    top_k_docs = sorted_docs_to_rerank[:3]
-    context = combine_documents_2(top_k_docs)
-
-    input_text = prompt_start + "Question: " + question + "Context: " + context + "Answer: "
-    print(question)
-    time.sleep(1)
-    answer = get_answer(input_text)
-    print("=====================")
-    with open('rag_with_reranker_with_multiquery_with_few_shot_answers.txt', 'a', encoding = 'utf-8') as output_file:
-        output_file.write(f'{answer}\n==================\n')
+        output_file.write(f'{answer}\n')
